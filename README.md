@@ -22,6 +22,7 @@ yarn add vue-blurhash
 ```javascript
 import Vue from 'vue'
 import VueBlurHash from 'vue-blurhash'
+import 'vue-blurhash/dist/vue-blurhash.css'
 
 ...
 
