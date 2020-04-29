@@ -35,6 +35,19 @@ Vue.use(VueBlurHash)
 </template>
 ```
 
+## Props
+
+| Name                  | Type              | Default                          | Description                                           |
+|-----------------------|-------------------|---------------------------------|--------------------------------------------------------|
+| `height`              | [Number, String]  | 128                             | Height of image                                        |
+| `width`               | [Number, String]  | 128                             | Width of image                                         |
+| `punch`               | [Number, String]  | 1                               | This value adjusts the contrast on the decoded image   |
+| `src`                 | String            | null                            | Image source url                                       |
+| `transitionDuration`  | Number            | 500                             | Fade animation - Transition time (in ms)               |
+
+
+## Use Canvas only
+
 Maybe you want to only draw the placeholder from the hash and implementing your own image displaying logic.
 You can do this from this way
 
@@ -47,14 +60,3 @@ import { BlurHashCanvas } from 'vue-blurhash'
   <blur-hash-canvas :hash="hash" :width="width" :height="height" :punch="punch" />
 </template>
 ```
-
-## Props
-
-| Name                  | Type              | Default                          | Description                                           |
-|-----------------------|-------------------|---------------------------------|--------------------------------------------------------|
-| `height`              | [Number, String]  | 128                             | Height of image                                        |
-| `width`               | [Number, String]  | 128                             | Width of image                                         |
-| `punch`               | [Number, String]  | 1                               | This value adjusts the contrast on the decoded image   |
-| `src`                 | String            | null                            | Image source url                                       |
-| `transitionDuration`  | Number            | 500                             | Fade animation - Transition time (in ms)               |
-
