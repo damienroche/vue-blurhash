@@ -35,6 +35,18 @@ Vue.use(VueBlurHash)
 </template>
 ```
 
+Maybe you want to only draw the placeholder from the hash and implementing your own image displaying logic.
+You can do this from this way
+
+```javascript
+import { BlurHashCanvas } from 'vue-blurhash'
+```
+
+```vue
+<template>
+  <blur-hash-canvas :hash="hash" :width="width" :height="height" :punch="punch" />
+</template>
+
 ## Props
 
 | Name                  | Type              | Default                          | Description                                           |
