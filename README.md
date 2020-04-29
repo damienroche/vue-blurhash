@@ -4,6 +4,8 @@
   <img src="./vue-blurhash.jpg" alt="Blurhash vuejs plugin">
 </p>
 
+> VueJS components using the [blurhash algorithm](https://blurha.sh)
+
 ## Installation
 
 You need [Vue.js](https://vuejs.org/) **version 2.0+**
@@ -16,8 +18,6 @@ yarn add vue-blurhash
 ```
 
 ### Import and use
-
-Note: if you want a specific preconfigured component, skit this step and import it as a simple component (see ***pre-configured*** section)
 
 ```javascript
 import Vue from 'vue'
