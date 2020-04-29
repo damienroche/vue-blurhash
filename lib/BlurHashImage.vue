@@ -1,7 +1,7 @@
 <template>
   <div style="position: relative;" :style="[{ paddingBottom: computedRatio }, cssVars]">
     <transition-group mode="in-out" name="fade" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
-      <blur-hash-canvas :hash="hash" :width="width" :height="height" :punch="punch" v-show="!imageLoaded" key="canvas" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
+      <blur-hash-canvas :hash="hash" :width="width" v-show="!imageLoaded" :height="height" :punch="punch" key="canvas" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
       <img :src="src" v-bind="$attrs" @load="onLoaded" v-show="imageLoaded" key="image" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
     </transition-group>
   </div>
@@ -18,7 +18,7 @@ import { parseNumber, percentRatio } from './utils'
   }
 })
 export default class BlurHash extends Vue {
-  @Prop() private hash!: string
+  @Prop({ type: String, required: true}) private hash!: string
   @Prop({ type: [Number, String], default: 128 }) private width!: string | number
   @Prop({ type: [Number, String], default: 128 }) private height!: string | number
   @Prop({ type: Number, default: 1 }) private punch!: number
@@ -28,7 +28,9 @@ export default class BlurHash extends Vue {
   imageLoaded = false
 
   onLoaded() {
-    this.imageLoaded = true
+    setTimeout(() => {
+      this.imageLoaded = true
+    }, 10000)
   }
 
   get computedRatio() {

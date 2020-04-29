@@ -1,5 +1,5 @@
 import BlurHash from './BlurHash.vue'
-import BlurHashCanvas from './BlurHasCanvas.vue'
+import BlurHashCanvas from './BlurHashCanvas.vue'
 import BlurHashImage from './BlurHashImage.vue'
 
 const plugin = {

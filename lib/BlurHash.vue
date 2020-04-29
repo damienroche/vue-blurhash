@@ -12,7 +12,7 @@ import BlurHashCanvas from './BlurHashCanvas.vue'
   }
 })
 export default class BlurHash extends Vue {
-  @Prop() private hash!: string
+  @Prop({ type: String, required: true}) private hash!: string
   @Prop({ type: [Number, String], default: 128 }) private width!: string | number
   @Prop({ type: [Number, String], default: 128 }) private height!: string | number
   @Prop({ type: Number, default: 1 }) private punch!: number
