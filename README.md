@@ -36,10 +36,11 @@ Vue.use(VueBlurHash)
 
 ## Props
 
-| Name          | Type              | Default                          | Description                                           |
-|---------------|-------------------|---------------------------------|--------------------------------------------------------|
-| `height`      | [Number, String]  | 128                             | Height of image                                        |
-| `width`       | [Number, String]  | 128                             | Width of image                                         |
-| `punch`       | [Number, String]  | 1                               | This value adjusts the contrast on the decoded image   |
-| `src`         | String            | null                            | Image source url                                       |
+| Name                  | Type              | Default                          | Description                                           |
+|-----------------------|-------------------|---------------------------------|--------------------------------------------------------|
+| `height`              | [Number, String]  | 128                             | Height of image                                        |
+| `width`               | [Number, String]  | 128                             | Width of image                                         |
+| `punch`               | [Number, String]  | 1                               | This value adjusts the contrast on the decoded image   |
+| `src`                 | String            | null                            | Image source url                                       |
+| `transitionDuration`  | Number            | 500                             | Fade animation - Transition time (in ms)               |
 
