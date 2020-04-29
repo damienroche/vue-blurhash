@@ -46,6 +46,7 @@ import { BlurHashCanvas } from 'vue-blurhash'
 <template>
   <blur-hash-canvas :hash="hash" :width="width" :height="height" :punch="punch" />
 </template>
+```
 
 ## Props
 
