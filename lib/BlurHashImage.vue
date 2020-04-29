@@ -28,9 +28,7 @@ export default class BlurHash extends Vue {
   imageLoaded = false
 
   onLoaded() {
-    setTimeout(() => {
-      this.imageLoaded = true
-    }, 10000)
+    this.imageLoaded = true
   }
 
   get computedRatio() {
