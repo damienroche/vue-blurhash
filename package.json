@@ -1,17 +1,36 @@
 {
   "name": "vue-blurhash",
   "version": "0.1.0",
-  "private": true,
+  "author": "Damien Roche",
+  "description": "Blurash Vue components",
+  "main": "./dist/vue-blurhash.common.js",
+  "keywords": [
+    "vue2",
+    "blurash",
+    "image",
+    "placeholder",
+    "blur",
+    "hash"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damienroche/vue-blurhash.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name vue-blurhash ./lib/index.ts"
   },
-  "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^8.4.1"
+  "bugs": {
+    "url": "https://github.com/damienroche/vue-blurhash.git/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "blurhash": "^1.1.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.26.0",
@@ -21,9 +40,13 @@
     "@vue/cli-plugin-typescript": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "core-js": "^3.6.4",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "typescript": "~3.8.3",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.1",
     "vue-template-compiler": "^2.6.11"
   }
 }

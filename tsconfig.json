@@ -26,6 +26,7 @@
       "scripthost"
     ]
   },
+  "no-non-null-assertion": false,
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
