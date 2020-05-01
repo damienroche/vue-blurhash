@@ -22,6 +22,8 @@ yarn add vue-blurhash
 ```javascript
 import Vue from 'vue'
 import VueBlurHash from 'vue-blurhash'
+
+// Import css if you want to use image fade transition
 import 'vue-blurhash/dist/vue-blurhash.css'
 
 ...
