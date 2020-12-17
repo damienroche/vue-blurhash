@@ -2,7 +2,7 @@
   <div style="position: relative;" :style="[{ paddingBottom: computedRatio }, cssVars]">
     <transition-group mode="in-out" name="fade" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
       <blur-hash-canvas :hash="hash" :width="width" v-show="!imageLoaded" :height="height" :punch="punch" key="canvas" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
-      <img :src="src" v-bind="$attrs" @load="onLoaded" v-show="imageLoaded" key="image" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
+      <img :src="src" :srcset="srcset" v-bind="$attrs" @load="onLoaded" v-show="imageLoaded" key="image" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"/>
     </transition-group>
   </div>
 </template>
@@ -23,6 +23,7 @@ export default class BlurHash extends Vue {
   @Prop({ type: [Number, String], default: 128 }) private height!: string | number
   @Prop({ type: Number, default: 1 }) private punch!: number
   @Prop({ type: String, required: true }) private src!: string
+  @Prop({ type: String, default: null }) private srcset!: string
   @Prop({ type: Number, default: 500 }) private transitionDuration!: number
 
   imageLoaded = false
